@@ -1,0 +1,45 @@
+﻿@model Bartender_App.Program
+
+@{
+    ViewData["Title"] = "Cart";
+    Layout= "~/Views/Shared/_CartLayout.cshtml";
+}
+
+<h2>My Drink Cart</h2>
+
+<hr />
+<div class="container col-sm-12">
+    <table class="table table-striped">
+        <thead>
+            <tr>                
+                <th><h4><strong>Drink Name</strong></h4></th>
+                <th><h4><strong>Quanity</strong></h4></th>
+                <th><h4><strong>Table #</strong></h4></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>                
+                <th>Coke</th>
+                <th>2</th>
+                <th>3</th>
+            </tr>
+            <tr>                
+                <th>Root Beer</th>
+                <th>2</th>
+                <th>3</th>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<form asp-action="Cart">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <input type="submit" value="Order Drink(s)" class="btn-sm btn-primary" />
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
