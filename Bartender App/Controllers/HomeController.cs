@@ -17,14 +17,14 @@ namespace Bartender_App.Controllers
 
         public IActionResult Queue()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Manage the drink queue";
 
             return View();
         }
 
         public IActionResult Cart()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Finish ordering your drinks";
 
             return View();
         }
@@ -34,5 +34,7 @@ namespace Bartender_App.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
     }
 }
