@@ -39,7 +39,7 @@ namespace Bartender_App
             //var connection = @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb;Trusted_Connection=True;ConnectRetryCount=0";
             //services.AddDbContext<Drink>(options => options.UseSqlServer(connection));
             var connection = @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb;Trusted_Connection=True;ConnectRetryCount=0";
-            services.AddDbContext<DrinkContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<BloggingContext>(options => options.UseSqlServer(connection));
 
         }
 
