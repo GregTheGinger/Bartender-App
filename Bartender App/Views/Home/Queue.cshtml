@@ -1,0 +1,69 @@
+﻿@model Bartender_App.Program
+
+@{
+    ViewData["Title"] = "Queue";
+}
+
+@*<div class="col-md-4">
+        <h2>Queue</h2>
+    </div>
+
+    <div class="col-md-4">
+        <div class="">
+            <form asp-action="Queue">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <input type="submit" value="Drink Created" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>*@
+<div class="container">
+    <div class='page-header'>
+        <div class='btn-toolbar pull-right'>
+            <div class='btn-group'>
+                <form asp-action="Queue">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <input type="submit" value="Drink Created" class="btn-sm btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <h2>Drink Queue</h2>
+
+    </div>
+</div>
+
+<div class="container col-sm-12">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th><h4><strong>Mark Completed</strong></h4></th>
+                <th><h4><strong>Drink Name</strong></h4></th>
+                <th><h4><strong>Quanity</strong></h4></th>
+                <th><h4><strong>Table #</strong></h4></th>
+            </tr>
+        </thead>
+        <tbody>
+        
+        <tr>
+            <th><input type="checkbox" /></th>
+            <th>Coke</th>
+            <th>2</th>
+            <th>3</th>
+        </tr>
+        <tr>
+            <th><input type="checkbox" /></th>
+            <th>Root Beer</th>
+            <th>2</th>
+            <th>3</th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
