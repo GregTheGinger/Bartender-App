@@ -19,7 +19,32 @@ namespace Bartender_App.Controllers
         }
 
         // GET: Drinks
+        [HttpGet]
         public async Task<IActionResult> Index()
+        {
+            return View(await _context.Drink.ToListAsync());
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Index(string drink)
+        {
+            return View(await _context.Drink.ToListAsync());
+        }
+
+        // GET: Drinks
+        public async Task<IActionResult> Manage()
+        {
+            return View(await _context.Drink.ToListAsync());
+        }
+
+        // GET: Drinks
+        public async Task<IActionResult> Cart()
+        {
+            return View(await _context.Drink.ToListAsync());
+        }
+
+        // GET: Drinks
+        public async Task<IActionResult> Queue()
         {
             return View(await _context.Drink.ToListAsync());
         }

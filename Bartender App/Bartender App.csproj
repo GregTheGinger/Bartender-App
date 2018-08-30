@@ -10,6 +10,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Views\Drinks\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\Shared\_QueueLayout.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

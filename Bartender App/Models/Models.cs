@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Configuration;
 
 namespace EFGetStarted.AspNetCore.NewDb.Models
 {
@@ -11,6 +12,7 @@ namespace EFGetStarted.AspNetCore.NewDb.Models
 
         public DbSet<Drink> Drink { get; set; }
         public DbSet<Drinks> Drinks { get; set; }
+
     }
 
     public class Drink

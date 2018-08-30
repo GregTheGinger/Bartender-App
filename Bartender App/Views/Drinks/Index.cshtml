@@ -1,35 +1,50 @@
 ﻿@model IEnumerable<EFGetStarted.AspNetCore.NewDb.Models.Drink>
+@*@model Bartender_App.Program*@
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Order Drinks";
 }
 
-<h2>Index</h2>
+<h2>Order Drinks</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.DrinkName)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.DrinkName)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.DrinkID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.DrinkID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.DrinkID">Delete</a>
-            </td>
-        </tr>
+<hr />
+
+@*@foreach (var item in Model)
+    {
+        <div class="">
+            <div class="col-sm-4 col-sm-6">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>@Html.DisplayFor(modelItem => item.DrinkName)</h3>
+
+                        <br />
+                        <br />
+                        <a href="#" class="btn-sm btn-success" role="button">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }*@
+
+@foreach (var item in Model)
+{
+
+        <div class="col-sm-4 col-sm-6">
+            <div class="thumbnail">
+                <div class="caption">
+                    <form action="/Drinks/Index" method="post">
+                        <h3>@Html.DisplayFor(modelItem => item.DrinkName)</h3> 
+                        <input type="submit" value="Add" />
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
 }
-    </tbody>
-</table>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
