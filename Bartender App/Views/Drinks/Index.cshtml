@@ -1,6 +1,9 @@
 ﻿@model IEnumerable<EFGetStarted.AspNetCore.NewDb.Models.Drink>
 @*@model Bartender_App.Program*@
-
+<div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>NOTE: Was only able to use a local database. This will run on my computer, not yours.</strong>
+</div>
 @{
     ViewData["Title"] = "Order Drinks";
 }
@@ -25,6 +28,7 @@
             </div>
         </div>
     }*@
+
 
 @foreach (var item in Model)
 {
