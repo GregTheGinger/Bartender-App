@@ -1,0 +1,50 @@
+﻿@model IEnumerable<EFGetStarted.AspNetCore.NewDb.Models.Drink>
+@*@model Bartender_App.Program*@
+
+@{
+    ViewData["Title"] = "Order Drinks";
+}
+
+<h2>Order Drinks</h2>
+
+<hr />
+
+@*@foreach (var item in Model)
+    {
+        <div class="">
+            <div class="col-sm-4 col-sm-6">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>@Html.DisplayFor(modelItem => item.DrinkName)</h3>
+
+                        <br />
+                        <br />
+                        <a href="#" class="btn-sm btn-success" role="button">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }*@
+
+@foreach (var item in Model)
+{
+
+        <div class="col-sm-4 col-sm-6">
+            <div class="thumbnail">
+                <div class="caption">
+                    <form action="/Drinks/Index" method="post">
+                        <h3>@Html.DisplayFor(modelItem => item.DrinkName)</h3> 
+                        <input type="submit" value="Add" />
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+}
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

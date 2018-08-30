@@ -12,6 +12,7 @@ namespace Bartender_App.Controllers
     {
         public IActionResult Index()
         {
+            
             return View();
         }
 

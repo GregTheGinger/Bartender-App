@@ -1,8 +1,9 @@
-﻿@model Bartender_App.Program
+﻿@*@model Bartender_App.Program*@
+@model IEnumerable<EFGetStarted.AspNetCore.NewDb.Models.Drink>
 
 @{
     ViewData["Title"] = "Cart";
-    Layout= "~/Views/Shared/_CartLayout.cshtml";
+    Layout = "~/Views/Shared/_CartLayout.cshtml";
 }
 
 <h2>My Drink Cart</h2>
@@ -11,7 +12,7 @@
 <div class="container col-sm-12">
     <table class="table table-striped">
         <thead>
-            <tr>                
+            <tr>
                 <th><h4><strong>Drink Name</strong></h4></th>
                 <th><h4><strong>Quanity</strong></h4></th>
                 <th><h4><strong>Table #</strong></h4></th>
@@ -19,16 +20,10 @@
         </thead>
         <tbody>
 
-            <tr>                
-                <th>Coke</th>
-                <th>2</th>
-                <th>3</th>
-            </tr>
-            <tr>                
-                <th>Root Beer</th>
-                <th>2</th>
-                <th>3</th>
-            </tr>
+            @*Nothing in body of table*@
+
+
+
         </tbody>
     </table>
 </div>
